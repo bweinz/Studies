@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <div class="caixaCabecalho">            
+            <h1><img src="Produtos/logo.png" alt="Logo da Barbaeria Alura"> </h1> <!-- Alt serve para mostrar a informacao caso nao carregue a foto-->
+
+                <nav>
+                    <ul class="navegacao">
+                        <li> <a href="BarbeariaHTML1.html"> Home </a></li>
+                        <li> <a href="ProdutosBarbeariaHTML2.html">Produtos </a></li>
+                        <li><a href="">Contato</a></li>
+                    </ul>
+                </nav>
+        </div>
+    </header>
+
+    <main>
+        <form>
+            <label for ="nomesobrenome">Nome e Sobrenome</label> <!--Dentro de um formulario usamos etique não formulario label-->
+                <input type="text" id="nomesobrenome" class="input-padrao" required><!--identificamos a entrada input do label com o id de nomesobrenome e declaramos que a label é para o nomesobrenome (for)
+                /////// input-padrão foi criado para definir um css padrão para todos os inputs que não sejam radio
+                /////// REQUIRED = TORNA-SE OBRIGATORIO PREENCHER O CAMPO-->
+
+
+            <label for="email">Email</label> <!--Usamos o Label for para criar uma etiqueta para email, que sera introduzido com o input, nomeamos ambos para se conectarem em "email"-->
+                <input type="email" id="email" class="input-padrao"required placeholder="seuemail@dominio.com">
+                <!-- mudamos o type para email de acordo com o sit mobile input para melhorar a experiencia do usuario
+                /////// Aula04 melhorando a semântica = REQUIRED para obrigar preencher, ele obriga que use um email "veridico, utilizando @"
+                /////// Aula04 PLACEHOLDER utilizamos para deixar escrito na caixa uma sugestão do que o usuario tem que escrever, quando ele começar escrever sumirá-->
+
+            
+            <label for="telefone">Telefone</label>                
+                <input type="tel" id="telefone" class="input-padrao"required placeholder="(XX)XXXXX-XXXX">
+                <!-- mudamos o type para Tel de acordo com o sit mobile input para melhorar a experiencia do usuario-->
+
+            <label for="mensagem">Mensagem</label>    
+            <textarea name="" id="mensagem" cols="30" rows="10"></textarea class="input-padrao" required>    <!-- Cols sáo colunas seria quase como uma largura e o rows e linhas, usamos textarea pois queremos colocar mais de uma linha de texto, entao é diferente do input-->
+
+            <div>
+                <p class="teste" id="teste" >Como prefere o nosso contato?</p>
+                    <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">Email</label>
+                    <!-- <input type="radio" name="contato" value="email" id="radio-email"> Radio box quando tem mais de 1 opção de escolher, precisamos declarar que o type do input é radio, value para declarar que a opção chama email, TODOS OS CAMPOS PRECISAM DE UM ID LINKADO COM O LABEL ou colocamos o input dentro do label -->
+                    <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label>
+                    <!-- o radio não usa o padrão input-padrao pois o radio precisa estar na mesma linha, não podemos colocar block para que o ponto da marcação telefone não fique desalinhado em outra linha-->
+                    
+                    <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked >Whatsapp</label>
+                    
+                     <!--o condigo inicialmente não tem o conteudo NAME, é inserido para que ser usado como se fosse uma classe pois quando clicarmos em 1 das opções por serem todos da mesma classe automaticamente ele desmarca o outro, se não existir o name, todos os valores podem ser clicados 
+                        /////// aula 04 Semantica CHECKED faz com que a opção do whatsapp já venha marcada, porém o usuario pode alterar se quiser -->
+            </div> <!-- div criada para saber que todas as linhas são referentes para essa entrada de dados-->
+
+            <fieldset> <!-- Usamos Fieldset tag semantica usado para agrupar elementos dentro de um formulario, como se fosse um div destinada para formularios-->
+                <legend>Qual horário prefere ser atendido</legend> <!--Legend faz o papel de titulo dentro de um fieldset-->
+                    <select name="" id=""> <!-- Marcador do tipo seletor diferente do input, especifico para criar itens selecionaveis-->
+                    <option value=""> Manhã </option>
+                    <option value=""> Tarde </option>
+                    <option value=""> Noite</option>
+                    </select>
+            </fieldset>
+            
+            <label class="checkbox"><input type="checkbox" checked> Gostaria de receber nossas novidades por Email?</label> 
+            <!-- colocar o tipo check box, marcar ou desmarcar um item, no casso receber as novidades por email usando o input dentro da label, podemos usar o par com for para que se comuniquem ou usar o input dentro do label
+            
+            /////// aula 04 Semantica CHECKED faz com que a opção do receber nossas novidades já venha marcada, porém o usuario pode alterar se quiser -->
+
+        <input type="submit" value="Enviar Formulario" class="enviar">    
+        <!--Após completar as caixas que desejamos precisamos enviar as informações pra isso é criado um novo input com o type submit e automaticamente ele vai criar uma caixa enviar, para ter certeza que sempre vai estar escrito enviar independente da lingua que estiver o navegador colocamos o value 
+        /////// Aula 05 Class: enviar, criamos a classe para mudarmos a caixa de enviar formularios de forma especifica-->
+
+            
+        </form>
+            <table> <!-- Tabela: sequencia de linhas e colunas.-->
+
+            <thead> <!--tag especifica da Tabela para semantica, Cabeçalho Tabela Header thead-->
+                <tr> <!-- Table Row = linha da tabela -->
+                    <th>Dia</th> 
+                    <!-- Celulas da tabela     por ordem 1ª palavra da tabela lado esquerdo--> 
+                    <!-- Trocamos a tag de dentro do conteudo por th para referirmor a tag como sendo da head-->
+                    <th>Horario</th> 
+                    <!-- Primeira palavra da tabela do lado direito-->
+                </tr>
+            </thead>   
+                <Tbody>
+                    <tr>
+                        <td>Segunda</td> <!-- Segunda linha, primeira palavra-->
+                        <td>8h ~ 20h</td>
+                    </tr>
+
+                    <tr>
+                        <td>Quarta</td> <!-- Terceira linha, primeira palavra-->
+                        <td>8h ~ 20h</td>
+                    </tr>
+
+                    <tr>
+                        <td>Sexta Feira</td>
+                        <td>8h ~ 20h</td>
+                    </tr>
+                </Tbody>
+            </table>
+
+
+    </main>
+
+
+    <footer> <!-- Footer é a tag semantica para o rodapé -->
+        <img src="Produtos/logo-branco.png" alt="Logo da Barbaeria Alura">
+        <p class="copyright">&copy; Copyright Barbearia Alura - 2021</p> <!--&copy; simbolo de copyright utilizado no rodapé. -->
+    </footer>
+    -->
+</body>
+</html>

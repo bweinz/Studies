@@ -1,0 +1,360 @@
+body{
+    font-family: 'Montserrat', sans-serif; 
+    
+    /*Importando a font do site <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">, do site google fonts*/
+}
+
+header {
+    background: #BBBBBB;
+    padding: 20px 0; /*expaçamento interno, quero que tudo dentro dele esteja dentro desses limites , nada chega na margem, entre a margem e o conteudo tenha esses 20px, 20 para cima e baixo e 0 para as laterais, aumenta um pouco o cabeçalho também */
+    
+}
+.caixa {
+    position: relative; /*quando criamos o position absolute em baixo do menu, ele fica absoluto, ou seja, fora da caixa que acabamos de criar, para que fique dentro precisamos elevar a caixa criada, colocando como relative.*/
+    width: 940px; /* 940 pixels de largura na caixa do cabeçalho, ou seja toda a caixa de fundo do cabeçalho*/
+    margin: 0 auto; /*Para que a margem de cima e baixo seja 0 e da direita e da esquerda se calcule sozinha para quando entrar em telas maiores ele reajustar automaticamente*/
+}
+nav {
+    position: absolute;
+                /* Posicao estatica é a posição que o elemento já vem ex: nav já está abaixo de h1-->
+                /<!-- Posicao relativa posso modificar a relatividade com o ponto central, posso -->
+                /<!-- Posso descer a posição de nav relativo 10 pontos: top 10px; o meu carregou 10px para baixo. se for left ele anda pq estou criando um espaçamento em 10 pontos do ponto inicial dele  Posicionamento absoluto, quando colocamos top 0 é que queremos que tenha 0 de espaço entre o top e o começo, coloca o item proximo a borda, se for a direita right 0, colado no canto direito ->*/
+    top: 110px; /*sabendo a altura da imagem esse é o centro*/
+    right: 0%;
+}
+
+nav li { /* Todos os itens de lista que estão dentro de li*/
+display: inline; /*Deixa os valores da lista um na frente do outro, não embaixo, block deixaria em baixo*/
+margin: 0 0 0 15px; 
+                    /*espaço entre cada item de lista, ou seja HOME espaço Produtos espaço     Contando top, down, direita esquerda 0 0 0 15px, 15 px da esquerda */
+                    /* Lista é o item que tem dentro as ancoras da nav a, cada lista é um item dentro */
+
+}
+
+nav a { /*Todos os <a> */
+    text-transform: uppercase; /* Coloca todo o conteudo em maiuscula*/
+    color: #000000; 
+    font-weight: bold; /*Coloca o conteudo em negrito*/
+    font-size: 22px;
+    text-decoration: none; /*tira os efeitos que veem automaticos*/
+    
+}
+nav a:hover{/* colocar o mouse em cima comando hover: queremos que mude o nome do link ou seja a ancora, todos os links dentro da nav*/
+    color: coral;
+    text-decoration: underline; /*para que o texto volte a ficar sublinhado quando o mouse estiver por cima*/
+    }
+
+
+.produtos{ /*essa caixa faz com que os objetos fiquem na largura de 940px da pagina centralizados, produtos é a caixa maior de li*/
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0; /*esse pading serve para descolar o conteudo escrito, cabelo, barba da linha cinza do cabeçalho em 50px de cima para baixo e 0 nas laterais*/
+    
+}
+
+.produtos li{ /*Para trabalhar com o conteudo de lista que está dentro do ul denominada produtos*/
+display: inline-block; /*para que fique um do lado do outro, sempre alinha os elementos pela linha de baixo*/
+/*o ul se comporta como um bloco ele ocupa 100% da largura da pagina, queremos que tenha um comportamento igual a div do cabeçalho*/
+text-align: center; /*todo conteudo fica alinhado no centro do bloco*/
+box-sizing: border-box; 
+width: 30%; /*distribuição dos itens, quero que todos tenham uma distribuição de tamanho igual, quero que cada um ternha algo em torno de 1/3 do conteudo total, eles se distribuem melhor na pagina, 30% é aproximadamente 1/3*/
+vertical-align: top; /*faz um alinhamento vertical baseado no topo, deixa o conteudo de cabelo barba e cabelo e barba nivelados no topo abaixo da borda do cabeçalho*/
+margin: 0 1.5%;/*cada um deles tem os 30% mas estão colados entre eles, para dar espaço entre eles, espaçamento externo, deixa um cartão 1.5% de distancia do outro 3% de cada lado mais 30% do tamanho de cada quadro  30+30+30+3+3+3 = 99% do espaço total*/
+padding: 30px 20px; /*para que a descrição não fique muito colada na borda de baixo*/
+box-sizing: border-box; /*os 30% são sempre a largura e tudo que colocamos em espaçamento interno já entram para os 30% assim nunca passa dos 100% e cai para outra linha*/
+border-color: black; /*Criando bordas, a cor da borda será preta*/
+border-width: 2px; /*deixa com 2px de grossura a linha da borda*/
+border-style: solid; /*solid é com o traço continuo*/
+/*pode ser usado também border: 2px solid #000000;*/
+border-radius: 10px; /*arredonda todas as bordas em 10px (raio da circuferencia), pode-se também mudar por cada uma das quinas 10 20 30 40px = esquerda de cima, direita de cima, esquerda de baixo, direita de baixo*/
+}
+
+
+
+.produtos li:hover{/*quando o mouse estiver em cima da lista dos produtos a borda fica colorida*/
+    border-color: coral;
+    }
+
+.produtos li:hover h2{/*quando o mouse estiver em cima da lista dos produtos o h2 mudará seu comportamento*/
+    font-size: 34px; /*para quando o mouse estiver em cima do elemento, afetar o elemento*/
+}
+
+.produtos li:active{/*quando o mouse está com o click pressionado a borda muda de cor para azul*/
+    border-color: cyan;
+}
+
+.produtos h2{/*para mexer em todo conteudo de h2 localizado dentro dos ul produtos*/
+font-size: 30px;
+font-weight: bold;
+}
+
+
+
+.produto-descricao{/*para mexer em todos os paragrafos 2 p1 com titulo de classe produto-descricao*/
+font-size: 18px;
+}
+
+.produto-preco{/*para mexer em todos os paragrafos 2 p2 com titulo de classe produto-preco*/
+font-size: 22px;
+font-weight: bold;
+margin: 10px 0; /*para que tenha 10px de espaço interno dentro da caixa de preço, para descolar da descrição*/
+}
+
+footer{
+    text-align: center; /*Todo conteudo fique centralizado*/
+    background-image: url("Produtos/bg.jpg"); /*Colocamos uma imagem como background*/
+    
+}
+
+.textocopy{
+    color: white;
+}
+
+
+form{ /* da um espaçamento entre o formulado e a caixa de cima, margin top 40px*/
+    margin: 40px 0;
+}
+
+form label, form p, form legend{ /* todos os paragrados e labels dentro de formulario: por padrão o label e o input vem com display inline ou seja, ele continua na mesma linha, precisamos quebrar o comportamento para cada campo estar um abaixo do outro*/
+    /*quando colocamos a virgula, dizemos que queremos todos os codigos em ambas as partes*/
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px; /*esse terceiro valor com 20px e o valor da parte de baixo com 20px de distancia externa*/
+
+}
+
+.input-padrao {/* por padrão o label e o input vem com display inline ou seja, ele continua na mesma linha, precisamos quebrar o comportamento para cada campo estar um abaixo do outro*/
+    /*quando colocamos a virgula, dizemos que queremos todos os codigos em ambas as partes*/
+    display: block;
+    margin: 0 0 20px; /*esse terceiro valor com 20px e o valor da parte de baixo com 20px de distancia externa*/
+    padding: 10px 25px; /* usamos o padding para aumentar um pouco a caixa, o conteudo fica centralizado e mais visivel, criamos sempre uma caixa interna, externa */
+    width: 50%; /*aumenta a largura de todos os campos de input, a caixa de digitacao aumenta*/
+} 
+
+.checkbox{
+    margin: 20px;
+}
+
+.enviar{ /*Configuracoes do botao enviar formulario*/
+    width: 40%;
+    padding: 15px 0;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    transition: 1s background; /*Aumenta em 1 segundo o tempo de troca de transição de cores do background, com o enviar:hover*/
+    transition: 1s all; /*Aumenta em 1 segundo o tempo de efeito de qualquer parametro visual que colocarmos em:Hover lembrando que o CSS vai ler o ALL não o background pois foi o ultimo que coloquei*/
+}
+.enviar:hover{ /*Configuração do botão enviar quando o mouse estiver por cima*/
+    background: darkorange;
+    cursor:pointer; /*Declaramos que o ponteiro do mouse vire uma mãozinha em vez da seta habitual demonstrando que é clicavel*/
+    transform: scale(1.2); /*1.2 = 20%    Aumenta o tamanho da caixa proporcionalmente em 20% 1.2 sempre usar o formato de 1.2*/
+     /* 2º opção rotate(70deg )70 degrees = graus em inglês, efeito no caso faria a caixa enviar formulario rodar 70 graus
+     Obs: quando temos 2 propriedades o CSS le a ultima, para usarmos 2 propriedades colocamos na mesma linha os paramentros diferentes. */
+}
+
+table{
+    margin: 20px 40px; /*espaçamento da tabela do botão enviar formulario*/
+}
+
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+td, th{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+
+
+/* CSS da pagina Inicial*/
+.banner{
+ width: 100%;
+}
+
+.titulo-principal{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em; /*2x o tamanho base, se o tamanho base for 15, o titulo sera 30, sempre sera o dobro do tamanho base*/
+    margin: 0 0 1em;
+    clear: left;
+    /*Limpa o float usado em utensilios*/
+    
+}
+/* Outros pseudo  ex: .titulo-principal:after
+:first-child
+:before = cria um espaço onde o css pode ser usado após o elemento, criar um elemento no HTML antes do meu item, através do CSS, Quando queremos criar um elemento na página, via CSS, antes do elemento do HTML, usamos a propriedade :before.
+    Ex .titulo-principal:before{ content: ") "; }, vai colocar ) após o css 
+:after
+    Ex .titulo-principal:after{ content: "( "; }, vai colocar ( Antes do css 
+*/
+
+
+.principal{
+ padding: 3em 0;
+ background: #fefefe;
+ width: 940px; /*Sempre utilizar para deixar a caixa do conteudo com 940px padrão da internet*/
+ margin: 0 auto;
+}
+
+.principal p {
+    margin: 0 0 1em;
+    color: black;
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.utensilios{
+ width: 120px;
+ float: left; 
+ margin: 0 20px 20px 0;
+  /*Float descola da pagina mas a sombra dele, o espaço continua sendo ocupado, todos os elementos abaixo ou seja P eles levantam para ficar na mesma linha, assim ficando em volta da imagem
+ todos os elementos abaixo do float são afetados*/
+}
+
+.mapa{
+    padding: 3em 0;
+    background: linear-gradient(#fefefe, #888888) ;
+
+    /*linear-gradient(90deg, orange 50%,blue,red) ;*/
+    /*radial-gradient (....) para efeito circular*/
+}
+
+.mapa-conteudo{
+    width: 940px;
+    margin: 0 auto;
+    
+}
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+
+}
+
+.beneficios{
+ padding: 3em 0;
+ background: #888888;
+ 
+}
+
+.conteudo-beneficios{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top; 
+    /* quando usamos o inline block e queremos usar 100% da largura o codigo no html deve estar colado sem nenhum espaçamento*/
+    /*Vertical align deixa o texto começando pela parte superior*/
+}
+
+.itens{
+    line-height: 1.5; /*espaçamento de texto dos itens do beneficios*/
+}
+
+.itens:first-child{ /*seleção de elementos especificos, classe pseudo elemento = :first-child pegar o primeiro deles, ou seja, na lista de beneficios pega o primeiro item, podendo usar 
+    last-child também 
+    nth-child(4) para selecionar qualquer item, no caso o 4º elemento da lista, se colocar (2n) pegamos todos os elementos pares das listas. */
+font-weight: bold;
+}  
+
+.itens:before{
+    content: "★" ;
+}
+
+.imagem-beneficios{
+width: 60%;
+opacity: 1;
+transition: 400ms;
+box-shadow: 10px 10px 10px 0  #000000;
+/*Usamos opacity para criar uma opacidade na imagem, sendo 1 com nada de opacidade e 0 com total opacidade, 0.3 seria como mostrar 30% da imagem*/
+}
+.imagem-beneficios:hover{
+    opacity: 0.3;
+}
+
+
+
+.video{
+    width: 560px;
+    margin: 2em auto;
+}
+
+
+/*Criando uma responsividade com outros aparelhos*/
+@media screen and (max-width: 480px) {
+
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video{
+        width: auto;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .lista-beneficios, .imagem-beneficios{
+    width: 100%;
+    }
+
+    .video{
+        margin: 20px;
+        box-shadow: 10px 10px 10px #ffffffcc;
+    }
+
+}
+
+
+
+
+
+ /* HIERARQUIA NO CSS*/
+
+/*Precisamos sempre pensar em criar nossa parte CSS pensando no quão especifico queremos que cada tag seja, por este motivo é usado frequentemente a classe, pois não é tão generico nem tão especifico igual um identificador para que funcione só naquele elemento, pode ser replicado varias vezes em varios elementos, pois a força pode sobrescrever os itens.
+
+Tag = Peso 1
+Tag + Tag = Peso 2
+Class = Peso 10
+Tag + Class = 11
+Id = Peso 100
+inline = 1000 ( mas só funciona no HTML) ex: <p class="teste" id="teste" style="color: purple"> Como prefere nosso contato?<p>  */
+
+p { /*Tag = 1*/
+    color: black;
+}
+
+form p {/*Tag + Tag = 2*/
+    color: black;
+}
+
+.teste {/*Classe = 10*/
+    color: yellow;
+}
+
+p.teste{/*Tag + Classe = 11*/
+    color: orange;
+}
+
+#teste{/*Id = 100*/
+    color: black;
+}
+
+/* Dentro do HTML = <p class="teste" id="teste" style="color: purple"> Como prefere nosso contato?<p>*/

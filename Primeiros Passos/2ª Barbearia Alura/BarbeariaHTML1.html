@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Alura</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    
+       
+</head>
+
+
+<body>
+    <header>
+
+        <div class="caixa"> <!-- Criamos a div para envelopar todo o outro conteudo e transformar em um box-->
+            <h1><img src="Produtos/logo.png" alt=""></h1> <!--Primeiro Caralho que aparece LOGO IMAGEM-->
+                <nav> <!-- Posicao estatica é a posição que o elemento já vem ex: nav já está abaixo de h1-->
+                    <!-- Posicao relativa posso modificar a relatividade com o ponto central, posso -->
+                    <!-- Posso descer a posição de nav relativo 10 pontos: top 10px; o meu carregou 10px para baixo. se for left ele anda pq estou criando um espaçamento em 10 pontos do ponto inicial dele-->
+                    <ul>
+                        <li><a href="BarbeariaHTML1.html"> Home </a></li>
+                        <li><a href="produtos.html"> Produtos</a></li>
+                        <li><a href="ContatosHTML3.html">Contatos</a></li>
+                    </ul>
+                </nav>
+        </div>
+    </header>
+    <img class="banner" src="imagens/banner.jpg" alt="">
+    <main>
+        <section class="principal"> <!-- Section usado para quando o conteudo fechado em si mesmo, tem um titulo e uma discrição, seu conteudo é um só, pra um objetivo
+            Para um bloco onde o conteúdo tenha o mesmo significado, o mesmo sentido, usamos uma <section>.. -->
+
+            <h2 class="titulo-principal">Sobre a Barbearia Alura</h2>
+            <img class="utensilios" src="Produtos/utensilios.jpg" alt="Utensilios de um Barbeiro"> 
+                <!--Alt serve para demonstrar o que é se a imagem não carregar-->
+
+            <p>Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, a BarbeariaAlura
+            já é destaque na cidade e conquista novos clientes a cada dia.</p>
+            <p id="missao"><em>Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de vida aos clientes"</strong>.</em></p>
+            <p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes</p>
+
+        </section>
+        <section class="mapa">
+            <h3 class="titulo-principal"> Nosso Estabelecimento</h3>
+            <p>Nosso estabelecimento está localizado no coração da cidade.</p>
+            <div class="mapa-conteudo"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1857103.4075029106!2d-46.71676551351098!3d-24.61833891623745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sCaelum%20-%20Escola%20de%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1628508198165!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+
+        </section>
+        
+        <div class="beneficios">
+            <h3 class="titulo-principal">Benefícios</h3>
+            
+            <div class="conteudo-beneficios">
+                <ul class="lista-beneficios">
+                    <li class="itens">Atendimento aos Clientes</li>
+                    <li class="itens">Espaço diferenciado</li>
+                    <li class="itens">Localização</li>
+                    <li class="itens">Profissionais Qualificados</li>
+                    <li class="itens">Pontualidade</li>
+                    <li class="itens">Limpeza</li>
+                </ul><img class="imagem-beneficios" src="imagens/beneficios.jpg" alt="">
+            </div>   <!-- final de Ul deve estar colado na imagem para funcionar o display inline block-->   
+
+                <div class="video">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <!--Criamos uma Div em volta do video para tratar a estrutura de video no css-->
+
+
+
+        </div>
+    </main>
+
+    <footer>
+        <img src="Produtos/logo-branco.png" alt="">
+        <p class="textocopy">&copy; Copyright Barbearia Alura - 2021</p>
+    </footer>
+
+</body>
+
+</html>

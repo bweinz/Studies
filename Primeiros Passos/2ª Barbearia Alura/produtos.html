@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos Novo</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="produtos.css">
+    
+</head>
+<body>
+    <header>
+
+        <div class="caixa"> <!-- Criamos a div para envelopar todo o outro conteudo e transformar em um box-->
+            <h1><img src="Produtos/logo.png" alt=""></h1> <!--Primeiro Caralho que aparece LOGO IMAGEM-->
+                <nav> <!-- Posicao estatica é a posição que o elemento já vem ex: nav já está abaixo de h1-->
+                    <!-- Posicao relativa posso modificar a relatividade com o ponto central, posso -->
+                    <!-- Posso descer a posição de nav relativo 10 pontos: top 10px; o meu carregou 10px para baixo. se for left ele anda pq estou criando um espaçamento em 10 pontos do ponto inicial dele-->
+                    <ul>
+                        <li><a href="BarbeariaHTML1.html"> Home </a></li>
+                        <li><a href="produtos.html"> Produtos</a></li>
+                        <li><a href="ContatosHTML3.html">Contatos</a></li>
+                    </ul>
+                </nav>
+        </div>
+    </header>
+
+    <main> <!-- usado como conteudo principal, coisa mais importante, nossos itens de produto-->
+        <ul class="produtos"> <!-- como cada conteudo tem seu proprio produto, transformamos em lista-->
+            <li>
+                <h2>Cabelo</h2> <!-- por serem titulos marcamos com h2-->
+                <img src="Produtos/cabelo.jpg" alt=""> <!-- imagem de dentro do catalogo-->
+                <p class="produto-descricao">Na tesoura ou na máquina, como o cliente preferir</p> <!-- paragrafo para colocar a descrição do cartão-->
+                <p class="produto-preco">R$25,00</p> <!-- paragrafo para colocar Valor do serviço-->
+            </li> 
+            <li>
+                <h2>Barba</h2>
+                <img src="Produtos/barba.jpg" alt="">
+                <p class="produto-descricao">Corte e desenho profissional de barba</p>
+                <p class="produto-preco">R$18,00</p>
+            </li>
+            <li>
+                <h2>Cabelo e Barba</h2>
+                <img src="Produtos/cabelo+barba.jpg" alt="">
+                <p class="produto-descricao">Pacote completo de cabelo e barba</p>
+                <p class="produto-preco">R$35,00</p>
+            </li>
+        </ul>
+       
+
+    </main>
+    
+    <footer>
+        <img src="Produtos/logo-branco.png" alt="">
+        <p class="textocopy">&copy; Copyright Barbearia Alura - 2021</p>
+    </footer>
+</body>
+</html>

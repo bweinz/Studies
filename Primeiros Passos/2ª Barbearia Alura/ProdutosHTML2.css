@@ -1,0 +1,99 @@
+header{
+    background: #bbbbbb;
+    padding: 20px 0px;
+    
+}
+.caixaCabecalho {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+nav{
+    position: absolute;
+    top: 110px; /* Centraliza o menu de navegação home produtos no meio do quadrado cinza */
+    right: 0%;
+}
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+    
+}
+nav a{ /* Indice de navegação Home/Produtos e Contato*/
+    text-transform: uppercase; /* Deixou o conteudo em Maiuscula*/
+    color: black;            /*deixa a cor da letra em Preto*/   
+    font-weight: bold;          /*deixa o texto com peso em negrito*/
+    font-size: 22px;            /*tamanho da fonte em 22px*/
+    text-decoration: none;      /*tira qualquer efeito de decoração padrão tipo sublinado*/
+    
+    }
+
+    nav a:hover {/*ou seja, o link da navegação, hover: mouse estiver em cima*/
+        color: #c78c19;      /* quando o mouse estiver em cima dos itens de navegação eles iram ficar da cor laranja*/
+        text-decoration: underline; /* quando o mouse estiver em cima aparecerá também o sublinado*/ 
+    }   
+
+
+
+
+.produtos{
+    width: 940px;
+    margin: 50px auto;
+}
+
+    .produtos li{
+        display: inline-block;
+        text-align: center; /* Define que o texto seja centralizado */
+        width: 30%; /* define a largura de cada foto em 30% do valor da largura da pagina */
+        vertical-align: top; /* as imagem partes do topo do main, ou seja abaixo do cabeçalho com espaçamento 0 */
+        margin: 0 1.5%; /* Descola uma foto da outra */
+        padding: 30px 20px; /* aumenta o expaçamento interno da imagem em 50 pixels para não colar na borda*/
+        box-sizing: border-box;
+        border-color: #000000 ;     /*Podemos usar border: 2px solid #000000;*/
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 10px;
+    }
+
+    .produtos li:hover {
+        border-color: #c78c19;
+        }
+
+        .produtos li:active { /*Quando pressionar o clique do mouse acontece:*/
+            border-color: red;
+            }   
+
+            .produtos li:hover h2 { /*Quero que o H2 quando estiver com o mouse em cima de li tenha tal comportamento: aumente a fonte para 34px*/
+                font-size: 34px;
+                }
+
+
+.produtos h2 {
+font-size: 30px;
+font-weight: bold;
+
+}
+    
+.produto-preco{
+font-size: 22px;
+font-weight: bold;
+margin-top: 10px;
+}
+.produto-descricao{
+    font-size: 18px;
+    padding: 30px 20px; /* o padding aumenta em 20px a mais dos 30% declarados a cima*/
+}
+
+footer{
+    text-align: center;
+    background: url("Produtos/bg.jpg"); /*quando criamos uma imagem de fundo mesmo que a imagem seja pequena o CSS vai replicando para garantir cubrir toda a parte*/
+    padding: 40px 0;
+    }
+
+.copyright{
+    color: white;
+    font-size: 13px;
+    margin: 20px 0;
+    
+    /*Unicode linguagem especifica de caracteres diferentes como o copyright, utilizar o unicode-table.com*, linguagem universal usada para representar*/
+}
