@@ -18,3 +18,4 @@ let valor2 = 23
 
 sum(valor1,valor2)
 console.log(`o numero 1 é ${valor1} e o numero 2 é ${valor2} a soma é ${sum(valor1, valor2)}`)
+//Att

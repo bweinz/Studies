@@ -38,3 +38,4 @@ delete person.age
 
 console.log(typeof "mayk")
 console.log(person)
+//Atualizando

@@ -4,3 +4,4 @@ console.log({
     andar: function(){console.log("mayke")}
 }
 )
+//Atualizando

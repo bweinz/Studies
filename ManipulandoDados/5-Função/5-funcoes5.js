@@ -18,3 +18,4 @@ const sayMyName = function(){
 }
 
 // por usar a palavra const, let ou var, de expressão não sofre elevação de hoisting
+//Atualizando
